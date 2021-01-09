@@ -11,11 +11,16 @@ itemsHover.forEach(function(item) {
             setTimeout(function() {
                 if (dropwDownMenu.style.maxHeight) {
                     dropwDownMenu.style.maxHeight = null;
+                    dropwDownMenu.style.overflow = "hidden";
                 } else {
                     dropwDownMenu.style.maxHeight = dropwDownMenu.scrollHeight + "px";
+                    setTimeout(function() {
+                        dropwDownMenu.style.overflow = "visible";
+                    }, 170);
+                    
                 }
                 
-            }, 200)
+            }, 50)
             
             
         }
@@ -23,8 +28,3 @@ itemsHover.forEach(function(item) {
     
 });
 
-let a = 1,
-    b = 2;
-
-let c = a++ + b++;
-console.log(a,b);
