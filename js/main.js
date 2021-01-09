@@ -7,7 +7,7 @@ itemsHover.forEach(function(item) {
         e.preventDefault();
         if (dropwDownMenu) {
             dropwDownMenu.closest('li').querySelector('.category__menu-link').classList.toggle('is-active');
-            dropwDownMenu.classList.toggle('active');
+            // dropwDownMenu.classList.toggle('active');
             setTimeout(function() {
                 if (dropwDownMenu.style.maxHeight) {
                     dropwDownMenu.style.maxHeight = null;
