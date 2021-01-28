@@ -6,10 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.min.css">
 </head>
 
 <body>
+    <!-- sprite -->
+    <svg style="display: none;">
+        <symbol id="arrow-right" viewBox="0 0 330 330">
+            <g>
+                <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+	c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+	C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+	C255,161.018,253.42,157.202,250.606,154.389z" />
+            </g>
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 443.52 443.52">
+            <g>
+                <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+			c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+			L143.492,221.863z" />
+            </g>
+        </symbol>
+        <symbol id="gold-star" viewBox="0 0 53.867 53.867">
+            <g>
+                <polygon points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 
+                10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+            </g>
+        </symbol>
+        <symbol id="arrows-cross" viewBox="0 0 611.988 611.988">
+            <g>
+                <path
+                    d="M45.343,181.859h45.344l74.59,93.249l59.196-73.388L136.03,91.172H45.343C20.291,91.172,0,111.463,0,136.516
+                    S20.291,181.859,45.343,181.859z M476.105,181.859v38.27c6.757,6.688,27.887,9.477,34.643,2.789l96.174-72.708
+                    c6.756-6.688,6.756-17.548,0-24.236l-96.174-72.708c-6.756-6.711-27.886-10.565-34.643-3.877v41.807H362.747L90.687,431.271
+                    H45.343C20.291,431.271,0,451.562,0,476.614c0,25.052,20.291,45.343,45.343,45.343h90.687l272.061-340.075h68.015V181.859z
+                     M510.748,389.668c-6.756-6.688-27.886-4.92-34.643,1.769v39.812h-68.015l-74.59-93.249l-59.196,73.389l88.442,110.547h113.358
+                    v40.378c6.757,6.688,27.887,3.719,34.643-2.97l96.174-72.708c6.756-6.688,6.756-17.548,0-24.236L510.748,389.668z" />
+            </g>
+        </symbol>
+        <symbol id="heart" viewBox="0 0 511.626 511.626">
+            <g>
+                <path d="M475.366,71.949c-24.175-23.606-57.575-35.404-100.215-35.404c-11.8,0-23.843,2.046-36.117,6.136
+                    c-12.279,4.093-23.702,9.615-34.256,16.562c-10.568,6.945-19.65,13.467-27.269,19.556c-7.61,6.091-14.845,12.564-21.696,19.414
+                    c-6.854-6.85-14.087-13.323-21.698-19.414c-7.616-6.089-16.702-12.607-27.268-19.556c-10.564-6.95-21.985-12.468-34.261-16.562
+                    c-12.275-4.089-24.316-6.136-36.116-6.136c-42.637,0-76.039,11.801-100.211,35.404C12.087,95.55,0,128.286,0,170.16
+                    c0,12.753,2.24,25.891,6.711,39.398c4.471,13.514,9.566,25.031,15.275,34.546c5.708,9.514,12.181,18.792,19.414,27.834
+                    c7.233,9.041,12.519,15.272,15.846,18.698c3.33,3.426,5.948,5.903,7.851,7.427L243.25,469.938
+                    c3.427,3.426,7.614,5.144,12.562,5.144s9.138-1.718,12.563-5.144l177.87-171.31c43.588-43.58,65.38-86.406,65.38-128.472
+                    C511.626,128.279,499.54,95.546,475.366,71.949z M421.405,271.795L255.813,431.391L89.938,271.507
+                    C54.344,235.922,36.55,202.133,36.55,170.156c0-15.415,2.046-29.026,6.136-40.824c4.093-11.8,9.327-21.177,15.703-28.124
+                    c6.377-6.949,14.132-12.607,23.268-16.988c9.141-4.377,18.086-7.328,26.84-8.85c8.754-1.52,18.079-2.281,27.978-2.281
+                    c9.896,0,20.557,2.424,31.977,7.279c11.418,4.853,21.934,10.944,31.545,18.271c9.613,7.332,17.845,14.183,24.7,20.557
+                    c6.851,6.38,12.559,12.229,17.128,17.559c3.424,4.189,8.091,6.283,13.989,6.283c5.9,0,10.562-2.094,13.99-6.283
+                    c4.568-5.33,10.28-11.182,17.131-17.559c6.852-6.374,15.085-13.222,24.694-20.557c9.613-7.327,20.129-13.418,31.553-18.271
+                    c11.416-4.854,22.08-7.279,31.977-7.279s19.219,0.761,27.977,2.281c8.757,1.521,17.702,4.473,26.84,8.85
+                    c9.137,4.38,16.892,10.042,23.267,16.988c6.376,6.947,11.612,16.324,15.705,28.124c4.086,11.798,6.132,25.409,6.132,40.824
+                    C475.078,202.133,457.19,236.016,421.405,271.795z" />
+            </g>
+        </symbol>
+        <symbol id="cart" viewBox="0 0 511.997 511.997">
+            <g>
+                <g>
+                    <path d="M405.387,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+                        S440.588,362.612,405.387,362.612z M405.387,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+                        c14.083,0,25.536,11.453,25.536,25.536S419.47,451.988,405.387,451.988z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M507.927,115.875c-3.626-4.641-9.187-7.348-15.079-7.348H118.22l-17.237-72.12c-2.062-8.618-9.768-14.702-18.629-14.702
+                        H19.152C8.574,21.704,0,30.278,0,40.856s8.574,19.152,19.152,19.152h48.085l62.244,260.443
+                        c2.062,8.625,9.768,14.702,18.629,14.702h298.135c8.804,0,16.477-6.001,18.59-14.543l46.604-188.329
+                        C512.849,126.562,511.553,120.516,507.927,115.875z M431.261,296.85H163.227l-35.853-150.019h341.003L431.261,296.85z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M173.646,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+                        S208.847,362.612,173.646,362.612z M173.646,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+                        s25.536,11.453,25.536,25.536S187.729,451.988,173.646,451.988z" />
+                </g>
+            </g>
+        </symbol>
+        <symbol id="eye" viewBox="0 0 511.992 511.992">
+            <g>
+                <g>
+                    <path d="M510.096,249.937c-4.032-5.867-100.928-143.275-254.101-143.275C124.56,106.662,7.44,243.281,2.512,249.105
+                        c-3.349,3.968-3.349,9.792,0,13.781C7.44,268.71,124.56,405.329,255.995,405.329S504.549,268.71,509.477,262.886
+                        C512.571,259.217,512.848,253.905,510.096,249.937z M255.995,383.996c-105.365,0-205.547-100.48-230.997-128
+                        c25.408-27.541,125.483-128,230.997-128c123.285,0,210.304,100.331,231.552,127.424
+                        C463.013,282.065,362.256,383.996,255.995,383.996z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M255.995,170.662c-47.061,0-85.333,38.272-85.333,85.333s38.272,85.333,85.333,85.333s85.333-38.272,85.333-85.333
+                        S303.056,170.662,255.995,170.662z M255.995,319.996c-35.285,0-64-28.715-64-64s28.715-64,64-64s64,28.715,64,64
+                        S291.28,319.996,255.995,319.996z" />
+                </g>
+            </g>
+        </symbol>
+    </svg>
     <header class="header">
         <div class="header__inner">
             <div class="header__top">
@@ -131,6 +230,33 @@
                                     <img class="category__menu-image" src="images/Mobile.png" alt="">
                                     Mobile & Tablets
                                 </a>
+                                <ul class="dropdown__menu">
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="category__menu-item">
                                 <a href="#" class="category__menu-link">
@@ -158,6 +284,33 @@
                                 <a href="#" class="category__menu-link">
                                     <img class="category__menu-image" src="images/Speaker.png" alt="">
                                     Speaker</a>
+                                <ul class="dropdown__menu">
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                    <li class="category__menu-item">
+                                        <a href="#" class="category__menu-link">
+                                            All Offers
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="category__menu-item">
                                 <a href="#" class="category__menu-link">
@@ -240,14 +393,1050 @@
                     </div>
                     <div class="latest-block">
                     </div>
+                    <section class="best-seller">
+                        <h3 class="best-seller__title">Best Seller</h3>
+                        <ul class="best-seller__list">
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller1.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller2.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller3.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller4.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller5.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller6.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller7.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="best-seller__item">
+                                <a class="best-seller__img" href="#"><img src="images/seller/seller8.png" alt=""></a>
+                                <div class="best-seller__content">
+                                    <h4 class="best-seller__subtitle"><a href="#">Wireless Headphones</a></h4>
+                                    <div class="best-seller__rating">
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                        <svg class="gold-star not-active">
+                                            <use xlink:href="#gold-star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="best-seller__price">
+                                        <span class="best-seller__old">$799</span>
+                                        <span class="best-seller__new">$209</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="testemonial">
+                        <h3 class="testemonial__title">Testimonial</h3>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide testemonial__block">
+                                    <div class="testemonial__block-header">
+                                        <img src="images/testemonials/teste1.png" alt="">
+                                        <div class="testemonial__block-person">
+                                            <h3 class="testemonial__block-title">John Smith</h3>
+                                            <div class="testemonial__block-job">CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <div class="testemonial__block-text">
+                                        “Lorem ipsum dolor sit amet,con-<br>sectetur elitad adipiscingCras non placerat
+                                        mi.”</br>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide testemonial__block">
+                                    <div class="testemonial__block-header">
+                                        <img src="images/testemonials/teste2.png" alt="">
+                                        <div class="testemonial__block-person">
+                                            <h3 class="testemonial__block-title">Lana Caesar</h3>
+                                            <div class="testemonial__block-job">CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <div class="testemonial__block-text">
+                                        “Lorem ipsum dolor sit amet,con-<br>sectetur elitad adipiscingCras non placerat
+                                        mi.”</br>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide testemonial__block">
+                                    <div class="testemonial__block-header">
+                                        <img src="images/testemonials/teste3.png" alt="">
+                                        <div class="testemonial__block-person">
+                                            <h3 class="testemonial__block-title">Vilgalm Clue</h3>
+                                            <div class="testemonial__block-job">CEO & Founder</div>
+                                        </div>
+                                    </div>
+                                    <div class="testemonial__block-text">
+                                        <p>
+                                            “Lorem ipsum dolor sit amet,con-<br>sectetur elitad adipiscingCras non
+                                            placerat
+                                            mi.”</br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="buttons">
+                                <div class="swiper-button-prev"><svg class="arrow-left">
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg></div>
+                                <div class="swiper-button-next"><svg class="arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="services">
+                        <h3 class="services__title">Our Services</h3>
+                        <ul class="services__list">
+                            <li class="services__list-item">
+                                <a class="services__img" href="#"><img src="images/services/Icon1.png" alt=""></a>
+                                <div class="services__content">
+                                    <h4 class="services__subtitle"><a href="#">100% Secure Payments</a></h4>
+                                    <div class="services__text">On order over $150</div>
+                                </div>
+                            </li>
+                            <li class="services__list-item">
+                                <a class="services__img" href="#"><img src="images/services/Icon2.png" alt=""></a>
+                                <div class="services__content">
+                                    <h4 class="services__subtitle"><a href="#">TrustPay</a></h4>
+                                    <div class="services__text">100% Payment Protection.</div>
+                                </div>
+                            </li>
+                            <li class="services__list-item">
+                                <a class="services__img" href="#"><img src="images/services/Icon3.png" alt=""></a>
+                                <div class="services__content">
+                                    <h4 class="services__subtitle"><a href="#">Support 24/7</a></h4>
+                                    <div class="services__text">Got a question?</div>
+                                </div>
+                            </li>
+                            <li class="services__list-item">
+                                <a class="services__img" href="#"><img src="images/services/Icon4.png" alt=""></a>
+                                <div class="services__content">
+                                    <h4 class="services__subtitle"><a href="#">Shop on the Go</a></h4>
+                                    <div class="services__text">Download the app</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="our-blog">
+                        <h3 class="our-blog__title">Our Blog</h3>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide our-blog__item">
+                                    <img class="our-blog__item-img" src="images/blogs/blog-img.png" alt="">
+                                    <div class="our-blog__item-content">
+                                        <time class="our-blog__item-date" datetime="2018-10-05"><img
+                                                src="images/icons/calendar.svg" alt="">June 5, 2018</time>
+                                        <h4 class="our-blog__item-subtitle">Chic Fashion Phenomenon</h4>
+                                        <div class="our-blog__item-text">Michele seemed to say, was the<br>21st-century
+                                            Gucci girl, an ecce</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide our-blog__item">
+                                    <img class="our-blog__item-img" src="images/blogs/our-blog2.jpg" alt="">
+                                    <div class="our-blog__item-content">
+                                        <time class="our-blog__item-date" datetime="2018-10-05"><img
+                                                src="images/icons/calendar.svg" alt="">June 5, 2018</time>
+                                        <h4 class="our-blog__item-subtitle">Chic Fashion Phenomenon</h4>
+                                        <div class="our-blog__item-text">Michele seemed to say, was the<br>21st-century
+                                            Gucci girl, an ecce</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide our-blog__item">
+                                    <img class="our-blog__item-img" src="images/blogs/our-blog3.jpg" alt="">
+                                    <div class="our-blog__item-content">
+                                        <time class="our-blog__item-date" datetime="2018-10-05"><img
+                                                src="images/icons/calendar.svg" alt="">June 5, 2018</time>
+                                        <h4 class="our-blog__item-subtitle">Chic Fashion Phenomenon</h4>
+                                        <div class="our-blog__item-text">Michele seemed to say, was the<br>21st-century
+                                            Gucci girl, an ecce</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="buttons">
+                                <div class="swiper-button-prev"><svg class="arrow-left">
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg></div>
+                                <div class="swiper-button-next"><svg class="arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </section>
                 </aside>
                 <main class="main">
-                    main
+                    <div class="home__wrapper">
+                        <div class="home__slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slider__item"><img src="images/Slider-home1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide slider__item"><img src="images/Slider-home2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide slider__item"><img src="images/Slider-home3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"><svg class="arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg></div>
+                                <div class="swiper-button-prev"><svg class="arrow-left">
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg></div>
+                            </div>
+                            <ul class="bottom__menu">
+                                <li>
+                                    <a class="bottom__menu-link" href="#">
+                                        <h3 class="bottom__menu-title">Sale Live Now!</h3>
+                                        <div class="bottom__menu-text">Up to 30% Off New Products</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="bottom__menu-link" href="#">
+                                        <h3 class="bottom__menu-title">Makeup Store</h3>
+                                        <div class="bottom__menu-text">Best Selling Products</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="bottom__menu-link" href="#">
+                                        <h3 class="bottom__menu-title">Electronics Fest</h3>
+                                        <div class="bottom__menu-text">Upcoming products</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="bottom__menu-link" href="#">
+                                        <h3 class="bottom__menu-title">Exchange offer</h3>
+                                        <div class="bottom__menu-text">Big Offers</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="bottom__menu-link" href="#">
+                                        <h3 class="bottom__menu-title">Accessories</h3>
+                                        <div class="bottom__menu-text">Electronics deals</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="speed__adv">
+                        </div>
+                    </div>
+                    <section class="treands">
+                        <div class="treands__header">
+                            <h3 class="treands__title">We Love Treand</h3>
+                            <nav class="treands__nav">
+                                <a class="treands__nav-link active" href="#" data-target="all">All</a>
+                                <a class="treands__nav-link" href="#" data-target="new-product">New Product</a>
+                                <a class="treands__nav-link" href="#" data-target="best-seller">Best Seller</a>
+                            </nav>
+                        </div>
+                        <div class="treands__catalog">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide treands__block">
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product1.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product2.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="best-seller">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product3.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product4.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="best-seller">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product5.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product6.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="best-seller">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product7.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="best-seller">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product8.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product9.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="treands__col">
+                                            <div class="product" data-target="new-product">
+                                                <div class="product__header">
+                                                    <div class="product__info">
+                                                        <span class="product__new">New</span>
+                                                        <span class="product__sale">Sale</span>
+                                                    </div>
+                                                    <img class="product__photo" src="images/treands/product10.png"
+                                                        alt="">
+                                                    <div class="product__nav">
+                                                        <button class="product__nav-btn">
+                                                            <svg class="eye">
+                                                                <use xlink:href="#eye"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="cart">
+                                                                <use xlink:href="#cart"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="arrows-cross">
+                                                                <use xlink:href="#arrows-cross"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <button class="product__nav-btn">
+                                                            <svg class="heart">
+                                                                <use xlink:href="#heart"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <h4 class="product__title">Wireless Headphones</h4>
+                                                    <div class="product__rating">
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                        <svg class="gold-star not-active">
+                                                            <use xlink:href="#gold-star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product__prices">
+                                                        <span class="product__prices-old">$799</span>
+                                                        <span class="product__prices-new">$209</span>
+                                                        <span class="product__prices-per">74% Off</span>
+                                                    </div>
+                                                    <time class="product__time" datetime="2021-01-15"><img src="images/icons/time.svg" alt="">223 : 22 : 56 :<span class="red-value">13</span></time>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="slider__buttons">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </main>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
