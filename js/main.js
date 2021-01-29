@@ -25,7 +25,7 @@ categoryListItem.addEventListener('click', (e) => {
     }
 });
 
-    
+
 
 
 // SWIPER SLIDER
@@ -36,18 +36,18 @@ slides.forEach((el) => {
     let mySwiper = new Swiper(el, {
         // Optional parameters
         slidesPerView: 1,
-        
+
         // If we need pagination
-        loop: false,
-       
+        loop: true,
+
         // Navigation arrows
         navigation: {
           nextEl: el.querySelector('.swiper-button-next'),
           prevEl: el.querySelector('.swiper-button-prev'),
         }
-      
+
         // And if we need scrollbar
-        
+
     });
 
 });
@@ -64,7 +64,7 @@ treandsNavArea.addEventListener('click', function(event) {
             event.preventDefault();
             hideContent();
             showContent(i, item.getAttribute('data-target'));
-           
+
         }
     })
 });
