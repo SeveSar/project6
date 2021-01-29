@@ -1,0 +1,34 @@
+@import "animate/animations";
+html {
+    font-size: 12px;
+}
+body {
+    font-size: 1rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@import "blocks/header";
+@import "blocks/page";
+@import "blocks/sidebar";
+@import "blocks/main";
+@import "blocks/container";
+@import "blocks/form";
+@import "blocks/nav";
+@import "blocks/category";
+@import "blocks/latest-block";
+@import "blocks/best-seller";
+@import "blocks/home__slider";
+@import "blocks/bottom__menu";
+@import "blocks/speed__adv";
+@import "blocks/testemonial";
+@import "blocks/services";
+@import "blocks/our-blog";
+@import "blocks/treands";
+@import "blocks/product";
+@import "blocks/cashback";
+@import "blocks/special-trends";
