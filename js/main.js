@@ -145,14 +145,14 @@ let mySwiper5 = new Swiper('.swiper-container4', {
     slidesPerView: 1,
     loop: false,
     navigation: {
-      nextEl: '.swiper-button-next4',
-      prevEl: '.swiper-button-prev4',
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
     },
     breakpoints: {
         1591: {
             slidesPerView: 4
         },
-        1271: {
+        1360: {
             slidesPerView: 3
         },
         831: {
@@ -170,6 +170,66 @@ let mySwiper5 = new Swiper('.swiper-container4', {
 
 
 
+
+    }
+
+});
+let mySwiper6 = new Swiper('.swiper-container5', {
+    slidesPerView: 5,
+    loop: false,
+    navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+    },
+    breakpoints: {
+        1400: {
+            slidesPerView: 6
+        },
+        1300: {
+            slidesPerView: 5
+        },
+        800: {
+            slidesPerView: 4
+        },
+        600: {
+            slidesPerView: 3
+        },
+        430: {
+            slidesPerView: 2
+        },
+        320: {
+            slidesPerView: 1
+        }
+
+    }
+
+});
+let mySwiper7 = new Swiper('.swiper-container6', {
+    slidesPerView: 1,
+    loop: false,
+    navigation: {
+      nextEl: '.swiper-button-next5',
+      prevEl: '.swiper-button-prev5',
+    },
+    breakpoints: {
+        // 1400: {
+        //     slidesPerView: 6
+        // },
+        // 1300: {
+        //     slidesPerView: 5
+        // },
+        // 800: {
+        //     slidesPerView: 4
+        // },
+        1600: {
+            slidesPerView: 3
+        },
+        1200: {
+            slidesPerView: 2
+        },
+        320: {
+            slidesPerView: 1
+        }
 
     }
 
@@ -267,8 +327,14 @@ categorieList.addEventListener('click', (e) => {
 });
 
 
+// ACTIVE GOLD STARS
+
+
+
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 
 //     alert("Вы используете мобильное устройство (телефон или планшет).")
 
 // } else alert("Вы используете ПК.")
+
+
