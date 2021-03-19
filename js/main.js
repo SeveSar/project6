@@ -9,10 +9,8 @@ categoryListItem.addEventListener('click', (e) => {
     if (eventTarget && eventTarget.classList.contains("category__menu-link") || eventTarget.classList.contains("category__menu-image")) {
         dropDownShow(categoryLinksItems, eventTarget);
         dropDownShow(categoryImgItems, eventTarget);
-
     }
 });
-
 
 function dropDownShow (links, eventTarget) {
     links.forEach((item,i) => {
@@ -22,12 +20,8 @@ function dropDownShow (links, eventTarget) {
                 categoryLinksItems[i].classList.toggle('is-active');
                 if (dropDownMenu.style.maxHeight) {
                     dropDownMenu.style.maxHeight = null;
-                    dropDownMenu.style.overflow = "hidden";
                 } else {
                     dropDownMenu.style.maxHeight = dropDownMenu.scrollHeight + "px";
-                    setTimeout(function() {
-                        dropDownMenu.style.overflow = "visible";
-                    }, 100);
                 }
             }
         }
