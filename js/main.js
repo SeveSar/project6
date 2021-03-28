@@ -36,12 +36,9 @@ slides.forEach((el) => {
     let mySwiper = new Swiper(el, {
         // Optional parameters
         slidesPerView: 1,
-
         // If we need pagination
         loop: false,
-
         // Navigation arrows
-
         navigation: {
           nextEl: el.closest('[data-slider]').querySelector('.swiper-button-next'),
           prevEl: el.closest('[data-slider]').querySelector('.swiper-button-prev'),
