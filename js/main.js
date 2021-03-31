@@ -203,15 +203,7 @@ let mySwiper7 = new Swiper('.swiper-container6', {
       prevEl: '.swiper-button-prev5',
     },
     breakpoints: {
-        // 1400: {
-        //     slidesPerView: 6
-        // },
-        // 1300: {
-        //     slidesPerView: 5
-        // },
-        // 800: {
-        //     slidesPerView: 4
-        // },
+
         1600: {
             slidesPerView: 3
         },
