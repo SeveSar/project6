@@ -203,11 +203,40 @@ let mySwiper7 = new Swiper('.swiper-container6', {
       prevEl: '.swiper-button-prev5',
     },
     breakpoints: {
-
         1600: {
             slidesPerView: 3
         },
         1200: {
+            slidesPerView: 2
+        },
+        320: {
+            slidesPerView: 1
+        }
+
+    }
+
+});
+let mySwiper8 = new Swiper('.swiper-container7', {
+    slidesPerView: 1,
+    loop: false,
+    navigation: {
+      nextEl: '.swiper-button-next6',
+      prevEl: '.swiper-button-prev6',
+    },
+    breakpoints: {
+        1400: {
+            slidesPerView: 6
+        },
+        1300: {
+            slidesPerView: 5
+        },
+        950: {
+            slidesPerView: 4
+        },
+        600: {
+            slidesPerView: 3
+        },
+        430: {
             slidesPerView: 2
         },
         320: {
@@ -308,6 +337,16 @@ categorieList.addEventListener('click', (e) => {
     }
 
 });
+
+
+// Progress bar
+const progressBar = document.querySelector('#progress-bar');
+document.addEventListener('scroll', (e) => {
+    let windowScroll = document.documentElement.scrollTop;
+    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let percent = (windowScroll / windowHeight) * 100;
+    progressBar.style.width = percent + "%"
+})
 
 
 // ACTIVE GOLD STARS
