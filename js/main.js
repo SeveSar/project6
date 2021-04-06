@@ -341,13 +341,16 @@ categorieList.addEventListener('click', (e) => {
 
 // Progress bar
 const progressBar = document.querySelector('#progress-bar');
+checkScrollPos()
 document.addEventListener('scroll', (e) => {
+    checkScrollPos()
+})
+function checkScrollPos () {
     let windowScroll = document.documentElement.scrollTop;
     let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let percent = (windowScroll / windowHeight) * 100;
     progressBar.style.width = percent + "%"
-})
-
+}
 
 // to-top-arrow
 
