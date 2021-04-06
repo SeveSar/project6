@@ -259,7 +259,6 @@ treandsNavArea.addEventListener('click', function(event) {
             event.preventDefault();
             hideContent();
             showContent(i, item.getAttribute('data-target'));
-
         }
     })
 });
@@ -274,19 +273,19 @@ function showContent(i, dataTarget) {
     treandsBtns[i].classList.add('active');
     if (dataTarget == 'all') {
         productItems.forEach((item) => {
-            item.closest('[data-myswiper]').style.display = "block";
-            item.closest('[data-myswiper]').classList.add('swiper-slide');
+            item.closest('[data-myswiper]').classList.add('show', 'swiper-slide', 'fade')
+            item.closest('[data-myswiper]').classList.remove('hide', 'fade');
         });
         mySwiper2.update();
         mySwiper3.update();
     } else {
         productItems.forEach((item,i) => {
             if (dataTarget != item.getAttribute('data-target')) {
-                item.closest('[data-myswiper]').style.display = 'none'
-                item.closest('[data-myswiper]').classList.remove('swiper-slide');
+                item.closest('[data-myswiper]').classList.add('hide', 'fade');
+                item.closest('[data-myswiper]').classList.remove('swiper-slide', 'fade', 'show');
             } else {
-                item.closest('[data-myswiper]').style.display = 'block';
-                item.closest('[data-myswiper]').classList.add('swiper-slide');
+                item.closest('[data-myswiper]').classList.add('swiper-slide', 'show', 'fade');
+                item.closest('[data-myswiper]').classList.remove('hide');
             }
         });
         mySwiper2.update();
