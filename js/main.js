@@ -349,8 +349,26 @@ document.addEventListener('scroll', (e) => {
 })
 
 
-// ACTIVE GOLD STARS
+// to-top-arrow
 
+const arrowTo = document.querySelector('.to-top');
+arrowTo.addEventListener('click', (e) => {
+    document.body.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+    })
+})
+
+// showArrow
+
+window.addEventListener('scroll', (e) => {
+    scrollPos = window.scrollY
+    if (scrollPos > document.documentElement.scrollHeight / 2) {
+        arrowTo.classList.add('active')
+    } else {
+        arrowTo.classList.remove('active')
+    }
+})
 
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
