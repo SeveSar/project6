@@ -365,7 +365,7 @@ arrowTo.addEventListener('click', (e) => {
 
 window.addEventListener('scroll', (e) => {
     scrollPos = window.scrollY
-    if (scrollPos > document.documentElement.scrollHeight / 2) {
+    if (scrollPos > document.documentElement.scrollHeight / 3) {
         arrowTo.classList.add('active')
     } else {
         arrowTo.classList.remove('active')
