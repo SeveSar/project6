@@ -109,6 +109,7 @@ let mySwiper4 = new Swiper('.swiper-container3', {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
+    spaceBeetwen: 10,
     breakpoints: {
         320: {
             slidesPerView: 1
@@ -125,6 +126,9 @@ let mySwiper4 = new Swiper('.swiper-container3', {
         // 1585: {
         //     slidesPerView: 5,
         // },
+        1619: {
+            slidesPerView: 4,
+        },
         1619: {
             slidesPerView: 4,
         },
